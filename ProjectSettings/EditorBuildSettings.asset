@@ -6,6 +6,96 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Scenes/Menu's/1 START MENU.unity
+    guid: 8198dbc082af9a24cbf1915920c60572
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/1 AIR.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/2 LANE.unity
+    guid: 3e822bf6fe247fb498311e9d89b32285
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/3 FLY.unity
+    guid: 6314dbe5267e2ee408be617a3337b414
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/4 SEAT.unity
+    guid: 579523b67e4c0f243b0ed3972fc23955
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/5 CREW.unity
+    guid: 971386dabaf1294419583fecbeaee963
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/6 GATE.unity
+    guid: 052801f171e28bd4b90b52a86d0fa494
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/7 STRIP.unity
+    guid: d2edabfbb626a1148aaf842e93f71a8c
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/8 JET.unity
+    guid: 145d77626c267f546bbe5f3e72c440e6
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/9 CAB.unity
+    guid: f9019a87e3653554ebe19a8f4cbcc07b
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/10 BAG.unity
+    guid: b769fd2a353788b46af93458eff39361
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/1 TICKET.unity
+    guid: eec7dba3f68393c4db4e67a54c9f6ccb
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/2 CHAIR.unity
+    guid: b26cf73e3933f194681bc2e0dac8f96e
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/3 BOARD.unity
+    guid: 00e0167143c8a69459558f56f3cf4235
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/4 CLOTHS.unity
+    guid: 5504102aa70ad2349a767b9a57794334
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/5 PILOT.unity
+    guid: b285011b7812c324297aa394cd2d51b2
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/6 TRAVEL.unity
+    guid: 8d253bfbd6116724fbc1782195527663
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/7 DELAY.unity
+    guid: 16793221675c3234b9536f6a3044cbcd
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/8 HELIPAD.unity
+    guid: e26afdc9919bbbf4ca60d0bdef40264c
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/9 HANGAR.unity
+    guid: 34bb25b4cedbc0c468f180f028897705
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/10 AIRFIELD.unity
+    guid: 0b0e4a8bae851504cbbdad0453eb9a43
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/1 PASSPORT.unity
+    guid: ffbe0a87852b2584991c8a78d44f979d
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/2 TERMINAL.unity
+    guid: ef0959a78e90aaf46aaead628f220a0d
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/3 LUGGAGE.unity
+    guid: 005cc2b7dcca4d94e88bd47f23ea3a2d
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/4 SHIPPING.unity
+    guid: 94651370b07c0e740a41a8b31a385be1
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/5 TAXIWAY.unity
+    guid: a1e3ee97446330a4cacf10ce93f6f194
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/6 RUNWAY.unity
+    guid: 0d2fa334138e293429913139a04a6806
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/7 INSTALLATION.unity
+    guid: f347b2cd639f1ac479aba3e8833b5920
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/8 CHICAGO.unity
+    guid: 79acf6913b209df48bdc3386110bdc5e
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/9 AIRPORT.unity
+    guid: 1d408f1685ed6bb4c961bafd8cf694de
+  - enabled: 1
+    path: Assets/Scenes/3 HardLevel/10 LAND STRIP.unity
+    guid: 9585414167197d14a9c2a9cedbe3fd63
   m_configObjects: {}

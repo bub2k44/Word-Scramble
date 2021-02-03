@@ -6,24 +6,27 @@ using TMPro;
 public class Randomizer : MonoBehaviour
 {
     [SerializeField]
-    private GameObject button1;
-    [SerializeField]
-    private GameObject button2;
-    [SerializeField]
-    private GameObject button3;
-    [SerializeField]
-    private GameObject button4;
-    [SerializeField]
-    private GameObject button5;
+    private List<GameObject> prefabsToSpawn;
 
-    [SerializeField]
-    private List<GameObject> words = new List<GameObject>();
+    private int randomIndex;
+
+    private void Awake()
+    {
+        //prefabsToSpawn = new List<GameObject>();
+    }
 
     private void Start()
     {
-        foreach (GameObject word in words)
-        {
+        SpawnGameObjects();
+    }
 
-        }
+    public void SpawnGameObjects()
+    {
+        int randomIndex = Random.Range(0, prefabsToSpawn.Count);
+        GameObject currentPrefab = prefabsToSpawn[randomIndex];
+        prefabsToSpawn.RemoveAt(randomIndex);
+        Instantiate(currentPrefab);
+
+        //currentPrefab.transform.parent = GameObject.Find("Scramble Screen").transform;
     }
 }

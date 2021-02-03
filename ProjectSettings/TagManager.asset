@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CorrectWord
+  - ScrambleScreen
+  - CorrectScreen
   layers:
   - Default
   - TransparentFX

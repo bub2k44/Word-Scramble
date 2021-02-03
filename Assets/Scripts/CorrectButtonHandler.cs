@@ -5,14 +5,22 @@ using UnityEngine;
 public class CorrectButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject scrambleScreen;
+    private CanvasGroup correctAnswercanvasGroup;
 
-    [SerializeField]
+    private GameObject scrambleScreen;
     private GameObject correctAnswer;
+
+    private void Awake()
+    {
+        scrambleScreen = GameObject.FindGameObjectWithTag("ScrambleScreen");
+    }
 
     public void CorrectAnswerScrene()
     {
         scrambleScreen.SetActive(false);
-        correctAnswer.SetActive(true);
+        correctAnswercanvasGroup.alpha = 1;
+        PermUI.perm.score += 100;
+        PermUI.perm.ll.LoadNextLevel();
+        SoundManager.PlaySound("CoinPickUp");
     }
 }

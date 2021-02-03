@@ -5,15 +5,17 @@ using TMPro;
 
 public class StartingWord : MonoBehaviour
 {
+    private CorrectWord correctWord;
     private TextMeshProUGUI word;
 
-    [SerializeField]
-    private CorrectWord correctWord;
+    private void Awake()
+    {
+        correctWord = FindObjectOfType<CorrectWord>();
+    }
 
     private void Start()
     {
         word = GetComponent<TextMeshProUGUI>();
-
         word.text = correctWord.MyCorrectWord;
     }
 }

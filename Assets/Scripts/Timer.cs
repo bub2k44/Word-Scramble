@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-
 public class Timer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 5f;
-
     [SerializeField]
     private TextMeshProUGUI countDownText;
 
@@ -17,6 +13,9 @@ public class Timer : MonoBehaviour
 
     [SerializeField]
     private CanvasGroup scrambleScreenCanvasGroup;
+
+    private float currentTime = 0f;
+    private float startingTime = 5f;
 
     private void Start()
     {
@@ -33,6 +32,7 @@ public class Timer : MonoBehaviour
             currentTime = 0;
             timerCanvasGroup.alpha = 0;
             scrambleScreenCanvasGroup.alpha = 1;
+            scrambleScreenCanvasGroup.interactable = true;
         }
     }
 }

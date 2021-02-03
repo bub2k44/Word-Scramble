@@ -5,17 +5,16 @@ using TMPro;
 
 public class CorrectWord : MonoBehaviour
 {
-    private TextMeshProUGUI word;
-
     [SerializeField]
     private string myCorrectWord;
+
+    private TextMeshProUGUI word;
 
     public string MyCorrectWord { get => myCorrectWord; set => myCorrectWord = value; }
 
     private void Start()
     {
         word = GetComponent<TextMeshProUGUI>();
-
         word.text = MyCorrectWord;
     }
 }
