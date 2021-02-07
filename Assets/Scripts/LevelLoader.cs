@@ -38,7 +38,7 @@ public class LevelLoader : MonoBehaviour
             PermUI.perm.level++;
             StartCoroutine(LoadLevelEasyTimer());
         }
-        else if (isEasy && PermUI.perm.level >= 120)
+        else if (isEasy && PermUI.perm.level >= 20)
         {
             isEasy = false;
             isMedium = true;
@@ -85,7 +85,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevelMedium()
     {
-        PermUI.perm.level = 11;
+        PermUI.perm.level = 21;
         PermUI.perm.score = 100;
         isEasy = false;
         isMedium = true;
@@ -95,7 +95,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevelHard()
     {
-        PermUI.perm.level = 21;
+        PermUI.perm.level = 41;
         PermUI.perm.score = 100;
         isEasy = false;
         isMedium = false;
