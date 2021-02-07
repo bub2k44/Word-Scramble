@@ -66,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/2 MediumLevel/9 HANGAR.unity
     guid: 34bb25b4cedbc0c468f180f028897705
   - enabled: 1
-    path: Assets/Scenes/2 MediumLevel/10 AIRFIELD.unity
+    path: Assets/Scenes/2 MediumLevel/13 PLANE.unity
     guid: 0b0e4a8bae851504cbbdad0453eb9a43
   - enabled: 1
     path: Assets/Scenes/3 HardLevel/1 PASSPORT.unity
