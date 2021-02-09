@@ -66,8 +66,38 @@ EditorBuildSettings:
     path: Assets/Scenes/2 MediumLevel/9 HANGAR.unity
     guid: 34bb25b4cedbc0c468f180f028897705
   - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/10 AIRFIELD.unity
+    guid: 2e053008e80baa947852f44b719d4e7f
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/11 HELIPORT.unity
+    guid: 592842a00d28d34448e29b683809119a
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/12 AIRSTRIP.unity
+    guid: bee90158cffe05d4689110d32140e732
+  - enabled: 1
     path: Assets/Scenes/2 MediumLevel/13 PLANE.unity
     guid: 0b0e4a8bae851504cbbdad0453eb9a43
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/14 AIRBUS.unity
+    guid: c9c4d1b86fcd2524eb3957f13be9ecee
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/15 RAMJET.unity
+    guid: c8da81d42c55b6442ad153bc6fbefc18
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/16 AIRLINER.unity
+    guid: 847a75ebd12e9394ca0a0c4ee729cb99
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/17 AIRCRAFT.unity
+    guid: f8de31006e93ef9448fe7a36e9c32275
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/18 BLIMP.unity
+    guid: 23bc844639c27f84ca3aadf43285efe5
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/19 PARKING.unity
+    guid: 09fb914deac91c94093a5769c3ab3974
+  - enabled: 1
+    path: Assets/Scenes/2 MediumLevel/20 SHUTTLE.unity
+    guid: c989bc04cfbeb7e4fb198c3dad929c0c
   - enabled: 1
     path: Assets/Scenes/3 HardLevel/1 PASSPORT.unity
     guid: ffbe0a87852b2584991c8a78d44f979d
