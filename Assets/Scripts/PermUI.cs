@@ -13,8 +13,6 @@ public class PermUI : MonoBehaviour
 
     public GameObject victory;
 
-    public WordList wordList;
-
     public int level;
     public int score;
 

@@ -1194,6 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4aed46aa98dbd04a9bbc2771a536e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!1 &1384944169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,7 +2106,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2931513222456910632}
-  - component: {fileID: 2931513222456910635}
   m_Layer: 5
   m_Name: WordList
   m_TagString: Untagged
@@ -2113,18 +2113,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2931513222456910635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2931513222456910634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68354f27e3f4ac148ae181be4a5d281b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2931513222602161172
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2208,7 +2196,7 @@ MonoBehaviour:
   scoreTxt: {fileID: 2931513220741095891}
   levelText: {fileID: 4096664949386733275}
   victory: {fileID: 172097804}
-  wordList: {fileID: 2931513222456910635}
+  wordList: {fileID: 0}
   level: 0
   score: 0
 --- !u!114 &2931513222602161177
