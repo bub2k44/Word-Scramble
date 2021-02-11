@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MediumButtonHandler : MonoBehaviour
 {
     public Button button;
+
     private LevelLoader ll;
 
     private void Awake()

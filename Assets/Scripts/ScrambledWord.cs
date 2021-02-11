@@ -31,6 +31,7 @@ public class ScrambledWord : MonoBehaviour
         if (correctWord.MyCorrectWord == myScrambledWord)
         {           
             Scamble();
+
             return null;
         }
         else

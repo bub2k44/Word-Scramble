@@ -19,11 +19,6 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private GameObject score;
 
-    //[SerializeField]
-    //private GameObject level;
-
-    //public int level;
-
     private void Start()
     {
         //randomSceneEasy = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
@@ -48,7 +43,6 @@ public class LevelLoader : MonoBehaviour
             isHard = false;
             StartCoroutine(LoadLevelMediumTimer());
         }
-
         if (isMedium && PermUI.perm.level < 30)
         {
             PermUI.perm.level++;
@@ -61,7 +55,6 @@ public class LevelLoader : MonoBehaviour
             isHard = true;
             StartCoroutine(LoadLevelHardTimer());
         }
-
         if (isHard && PermUI.perm.level < 40)
         {
             PermUI.perm.level++;
