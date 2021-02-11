@@ -27,6 +27,15 @@ public class ScrambledWord : MonoBehaviour
     {
         var newString = new string(correctWord.MyCorrectWord.OrderBy(x => Guid.NewGuid()).ToArray());
         myScrambledWord = newString;
-        return myScrambledWord;
+        
+        if (correctWord.MyCorrectWord == myScrambledWord)
+        {           
+            Scamble();
+            return null;
+        }
+        else
+        {
+            return myScrambledWord;
+        }
     }
 }

@@ -41,7 +41,7 @@ public class LevelLoader : MonoBehaviour
             PermUI.perm.level++;
             StartCoroutine(LoadLevelEasyTimer());
         }
-        else if (isEasy && PermUI.perm.level >= 10)
+        if (isEasy && PermUI.perm.level >= 10)
         {
             isEasy = false;
             isMedium = true;
@@ -54,7 +54,7 @@ public class LevelLoader : MonoBehaviour
             PermUI.perm.level++;
             StartCoroutine(LoadLevelMediumTimer());
         }
-        else if (isMedium && PermUI.perm.level >= 30)
+        if (isMedium && PermUI.perm.level >= 30)
         {
             isEasy = false;
             isMedium = false;
@@ -67,18 +67,16 @@ public class LevelLoader : MonoBehaviour
             PermUI.perm.level++;
             StartCoroutine(LoadLevelHardTimer());
         }
-        else if (isHard && PermUI.perm.level >= 40)
+        if (isHard && PermUI.perm.level >= 40)
         {
             PermUI.perm.victory.SetActive(true);
-
-
             isHard = false;
         }
     }
 
     public void LoadLevelEasy()
     {
-        PermUI.perm.level = 1;
+        PermUI.perm.level = 0;
         PermUI.perm.score = 100;
         isEasy = true;
         isMedium = false;
@@ -88,7 +86,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevelMedium()
     {
-        PermUI.perm.level = 11;
+        PermUI.perm.level = 10;
         PermUI.perm.score = 100;
         isEasy = false;
         isMedium = true;
@@ -98,7 +96,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevelHard()
     {
-        PermUI.perm.level = 31;
+        PermUI.perm.level = 30;
         PermUI.perm.score = 100;
         isEasy = false;
         isMedium = false;
