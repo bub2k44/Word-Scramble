@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu's/1 START MENU.unity
+    path: Assets/Scenes/3 HardLevel/Menu's/1 START MENU.unity
     guid: 8198dbc082af9a24cbf1915920c60572
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR.unity
@@ -126,6 +126,6 @@ EditorBuildSettings:
     path: Assets/Scenes/3 HardLevel/9 AIRPORT.unity
     guid: 1d408f1685ed6bb4c961bafd8cf694de
   - enabled: 1
-    path: Assets/Scenes/3 HardLevel/10 LAND STRIP.unity
+    path: Assets/Scenes/3 HardLevel/10 LANDING STRIP.unity
     guid: 9585414167197d14a9c2a9cedbe3fd63
   m_configObjects: {}
