@@ -2800,7 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacaeef242a56c24590e9c3a6c309ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCorrectWord: LAND STRIP
+  myCorrectWord: IDENTIFICATION
 --- !u!224 &7060203150469830582
 RectTransform:
   m_ObjectHideFlags: 0
