@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/1 EasyLevel/6 GATE.unity
     guid: 052801f171e28bd4b90b52a86d0fa494
   - enabled: 1
-    path: Assets/Scenes/1 EasyLevel/7 STRIP.unity
+    path: Assets/Scenes/1 EasyLevel/7 CAP.unity
     guid: d2edabfbb626a1148aaf842e93f71a8c
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/8 JET.unity
@@ -38,6 +38,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/10 BAG.unity
     guid: b769fd2a353788b46af93458eff39361
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/11 KITE.unity
+    guid: a3c64d06c752eb94093395f90bb2017a
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/12 VISA.unity
+    guid: ec440b4e8e3eb78449b4e6f18ccd9709
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/13 BUS.unity
+    guid: e8aef3473c6e858408faf074cd04c545
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/14 PORT.unity
+    guid: 52ca5e7ee93fc4649b1a2b83b4919225
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/15 FOG.unity
+    guid: 5acc707d3e062bf41a2b863e3f3c17fc
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/16 RAIN.unity
+    guid: 05d390e446a18024a98119390d42a915
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/17 CITY.unity
+    guid: 2e79c3cb81a7db3448f0713a541e2a10
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/18 HUB.unity
+    guid: 06c07c2246cf69146a62d6ac055d7e7e
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/19 ICE.unity
+    guid: 07ebe8c409a2b33478e319177c56a370
+  - enabled: 1
+    path: Assets/Scenes/1 EasyLevel/20 DRY.unity
+    guid: 7f0089651ed78a1409c8127ad59d4633
   - enabled: 1
     path: Assets/Scenes/2 MediumLevel/1 TICKET.unity
     guid: eec7dba3f68393c4db4e67a54c9f6ccb
