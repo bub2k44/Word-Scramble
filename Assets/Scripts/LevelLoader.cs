@@ -19,6 +19,9 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private GameObject score;
 
+    [SerializeField]
+    private GameObject level;
+
     private void Start()
     {
         randomSceneEasy = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
@@ -109,6 +112,7 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentScene);
 
         yield return new WaitForSeconds(0.3f);
+        level.SetActive(true);
         score.SetActive(true);
     }
 
@@ -127,6 +131,7 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentScene);
 
         yield return new WaitForSeconds(0.3f);
+        level.SetActive(true);
         score.SetActive(true);
     }
 
@@ -145,6 +150,7 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentScene);
 
         yield return new WaitForSeconds(0.3f);
+        level.SetActive(true);
         score.SetActive(true);
     }
 
@@ -152,6 +158,8 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("1 START MENU");
         PermUI.perm.victory.SetActive(false);
+        level.SetActive(false);
+        score.SetActive(false);
         PermUI.perm.level = 0;
         PermUI.perm.score = 0;
     }
