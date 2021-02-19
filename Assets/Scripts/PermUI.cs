@@ -12,6 +12,7 @@ public class PermUI : MonoBehaviour
     public TextMeshProUGUI levelText;
 
     public GameObject victory;
+    public GameObject advertiser;
 
     public int level;
     public int score;

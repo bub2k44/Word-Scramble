@@ -114,6 +114,7 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         level.SetActive(true);
         score.SetActive(true);
+        PermUI.perm.advertiser.SetActive(true);
     }
 
     private IEnumerator LoadLevelMediumTimer()
@@ -133,6 +134,7 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         level.SetActive(true);
         score.SetActive(true);
+        PermUI.perm.advertiser.SetActive(true);
     }
 
     private IEnumerator LoadLevelHardTimer()
@@ -152,6 +154,7 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         level.SetActive(true);
         score.SetActive(true);
+        PermUI.perm.advertiser.SetActive(true);
     }
 
     public void LoadMainMenu()

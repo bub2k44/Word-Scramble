@@ -13,6 +13,7 @@ public class Advertiser : MonoBehaviour
 
     private float currentTime = 0f;
     private float startingTime = 1f;
+    private float speed = .08f;
     private int imageIndex = 0;
 
     private bool isImage0 = true;
@@ -48,7 +49,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 0)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Horizontal;
             images[index].fillOrigin = (int)Image.OriginHorizontal.Right;
             images[index].fillAmount = currentTime;
@@ -68,7 +69,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 1)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Vertical;
             images[index].fillOrigin = (int)Image.OriginVertical.Top;
             images[index].fillAmount = currentTime;
@@ -88,7 +89,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 2)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial180;
             images[index].fillOrigin = (int)Image.Origin180.Left;
             images[index].fillAmount = currentTime;
@@ -108,7 +109,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 3)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial360;
             images[index].fillOrigin = (int)Image.Origin360.Right;
             images[index].fillAmount = currentTime;
@@ -128,7 +129,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 4)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial90;
             images[index].fillOrigin = (int)Image.Origin90.BottomRight;
             images[index].fillAmount = currentTime;
@@ -148,7 +149,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 5)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial90;
             images[index].fillOrigin = (int)Image.Origin90.BottomLeft;
             images[index].fillAmount = currentTime;
@@ -168,7 +169,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 6)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Horizontal;
             images[index].fillOrigin = (int)Image.OriginHorizontal.Left;
             images[index].fillAmount = currentTime;
@@ -188,7 +189,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 7)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial180;
             images[index].fillOrigin = (int)Image.Origin180.Bottom;
             images[index].fillAmount = currentTime;
@@ -208,7 +209,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 8)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Vertical;
             images[index].fillOrigin = (int)Image.OriginVertical.Bottom;
             images[index].fillAmount = currentTime;
@@ -228,7 +229,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 9)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial360;
             images[index].fillOrigin = (int)Image.Origin360.Bottom;
             images[index].fillAmount = currentTime;
@@ -248,7 +249,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 10)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial90;
             images[index].fillOrigin = (int)Image.Origin90.TopLeft;
             images[index].fillAmount = currentTime;
@@ -268,7 +269,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 11)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial360;
             images[index].fillOrigin = (int)Image.Origin360.Top;
             images[index].fillAmount = currentTime;
@@ -288,7 +289,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 12)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial90;
             images[index].fillOrigin = (int)Image.Origin90.TopRight;
             images[index].fillAmount = currentTime;
@@ -308,7 +309,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 13)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial180;
             images[index].fillOrigin = (int)Image.Origin180.Right;
             images[index].fillAmount = currentTime;
@@ -328,7 +329,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 14)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Horizontal;
             images[index].fillOrigin = (int)Image.OriginHorizontal.Right;
             images[index].fillAmount = currentTime;
@@ -348,7 +349,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 15)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial360;
             images[index].fillOrigin = (int)Image.Origin360.Left;
             images[index].fillAmount = currentTime;
@@ -368,7 +369,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 16)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial90;
             images[index].fillOrigin = (int)Image.Origin90.BottomLeft;
             images[index].fillAmount = currentTime;
@@ -388,7 +389,7 @@ public class Advertiser : MonoBehaviour
         if (images[index].fillAmount >= 0 && imageIndex == 17)
         {
             backImages[index].SetActive(true);
-            currentTime -= .2f * Time.deltaTime;
+            currentTime -= speed * Time.deltaTime;
             images[index].fillMethod = Image.FillMethod.Radial180;
             images[index].fillOrigin = (int)Image.Origin180.Top;
             images[index].fillAmount = currentTime;
