@@ -22,6 +22,15 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private GameObject level;
 
+    [SerializeField]
+    private GameObject answewrCanvas;
+
+    [SerializeField]
+    private GameObject trueEmoji;
+
+    [SerializeField]
+    private GameObject falseEmoji;
+
     private void Start()
     {
         randomSceneEasy = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
@@ -111,10 +120,17 @@ public class LevelLoader : MonoBehaviour
         randomSceneEasy.RemoveAt(randomIndex);
         SceneManager.LoadScene(currentScene);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
+        PermUI.perm.combatTextPlus.SetActive(false);//
+        PermUI.perm.combatTextMinus.SetActive(false);//
         level.SetActive(true);
         score.SetActive(true);
         PermUI.perm.advertiser.SetActive(true);
+
+        PermUI.perm.trueEmoji.SetActive(false);
+        PermUI.perm.answerCanvas.SetActive(false);
+        PermUI.perm.backStorImagesCanvas.SetActive(true);
+        PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
 
     private IEnumerator LoadLevelMediumTimer()
@@ -135,6 +151,11 @@ public class LevelLoader : MonoBehaviour
         level.SetActive(true);
         score.SetActive(true);
         PermUI.perm.advertiser.SetActive(true);
+
+        PermUI.perm.trueEmoji.SetActive(false);
+        PermUI.perm.answerCanvas.SetActive(false);
+        PermUI.perm.backStorImagesCanvas.SetActive(true);
+        PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
 
     private IEnumerator LoadLevelHardTimer()
@@ -155,6 +176,11 @@ public class LevelLoader : MonoBehaviour
         level.SetActive(true);
         score.SetActive(true);
         PermUI.perm.advertiser.SetActive(true);
+
+        PermUI.perm.trueEmoji.SetActive(false);
+        PermUI.perm.answerCanvas.SetActive(false);
+        PermUI.perm.backStorImagesCanvas.SetActive(true);
+        PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
 
     public void LoadMainMenu()

@@ -17,6 +17,16 @@ public class PermUI : MonoBehaviour
     public int level;
     public int score;
 
+    public GameObject trueEmoji;
+    public GameObject falseEmoji;
+
+    public GameObject answerCanvas;
+    public GameObject backStorImagesCanvas;
+    public GameObject frontStoreImagesCanvas;
+
+    public GameObject combatTextPlus;
+    public GameObject combatTextMinus;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -32,6 +42,7 @@ public class PermUI : MonoBehaviour
 
         score = 0;
         level = 0;
+
     }
 
     private void Update()
