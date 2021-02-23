@@ -14,8 +14,8 @@ public class CorrectButtonHandler : MonoBehaviour
 
     public void CorrectAnswerScrene()
     {
-        PermUI.perm.combatTextPlus.SetActive(true);
-        PermUI.perm.combatTextPlus.GetComponent<Animator>().SetTrigger("hit");
+        PermUI.perm.combatTextScorePlus.SetActive(true);
+        PermUI.perm.combatTextScorePlus.GetComponent<Animator>().SetTrigger("hit");
         scrambleScreen.SetActive(false);
         PermUI.perm.trueEmoji.SetActive(true);
         PermUI.perm.answerCanvas.SetActive(true);

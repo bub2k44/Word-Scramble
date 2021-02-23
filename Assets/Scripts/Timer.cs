@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -14,8 +15,15 @@ public class Timer : MonoBehaviour
     [SerializeField]
     private CanvasGroup scrambleScreenCanvasGroup;
 
-    private float currentTime = 0f;
-    private float startingTime = 5f;
+    [SerializeField]
+    private Image codeFace;
+
+    [SerializeField]
+    private CanvasGroup canvasGroup;
+
+    private float currentTime;
+    private float startingTime = 1f;
+    private float speed = .3f;
 
     private void Start()
     {
@@ -24,15 +32,37 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countDownText.text = currentTime.ToString("0");
+        //codeFace.fillAmount = currentTime;
+        //currentTime -= 1 * Time.deltaTime;
+        //countDownText.text = currentTime.ToString("0");
+        //codeFace.fillAmount = currentTime;
+        //Debug.Log("CodeFace");
+        //DEBUGG
 
-        if (currentTime <= 0)
+        FillRadius360Top();
+
+        if (codeFace.fillAmount <= 0)
         {
+            canvasGroup.alpha = 0;
             currentTime = 0;
             timerCanvasGroup.alpha = 0;
             scrambleScreenCanvasGroup.alpha = 1;
             scrambleScreenCanvasGroup.interactable = true;
+            
+            //codeFace.fillAmount = startingTime;
+        }
+    }
+
+    private void FillRadius360Top()
+    {
+        if (codeFace.fillAmount >= 0)
+        {
+            currentTime -= speed * Time.deltaTime;
+            var tempTime = currentTime * 5;
+            countDownText.text = tempTime.ToString("0");
+            codeFace.fillMethod = Image.FillMethod.Radial360;
+            codeFace.fillOrigin = (int)Image.Origin360.Top;
+            codeFace.fillAmount = currentTime;
         }
     }
 }

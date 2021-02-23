@@ -9,6 +9,7 @@ TagManager:
   - CorrectScreen
   - CorrectImoji
   - AnswerCanvas
+  - Balloon
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - UI 2
-  - 
+  - Ballons
   - 
   - 
   - 
@@ -43,9 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: backGround
+    uniqueID: 224607137
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: backGround
-    uniqueID: 224607137
+  - name: Ballons
+    uniqueID: 1471367173
     locked: 0

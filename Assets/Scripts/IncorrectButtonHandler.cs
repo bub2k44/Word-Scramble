@@ -13,22 +13,16 @@ public class IncorrectButtonHandler : MonoBehaviour
 
     public void DiasbleButton()
     {
-        PermUI.perm.combatTextMinus.SetActive(true);
-        PermUI.perm.combatTextMinus.GetComponent<Animator>().SetTrigger("hit");
+        PermUI.perm.combatTextScoreMinus.SetActive(true);
+        PermUI.perm.combatTextScoreMinus.GetComponent<Animator>().SetTrigger("hit");
         StartCoroutine(Reset());
-
-        //this.gameObject.SetActive(false);
         canvasGroup.alpha = 0;
-
         PermUI.perm.falseEmoji.SetActive(true);
         PermUI.perm.answerCanvas.SetActive(true);
         PermUI.perm.backStorImagesCanvas.SetActive(false);
         PermUI.perm.frontStoreImagesCanvas.SetActive(false);
-
         PermUI.perm.score -= 20;
-        SoundManager.PlaySound("Death");
-
-        
+        SoundManager.PlaySound("Death");      
     }
 
     private IEnumerator Reset()

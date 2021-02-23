@@ -40,9 +40,23 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
+
+        if (isEasy && PermUI.perm.level >= 5)
+        {
+            PermUI.perm.victory.GetComponent<CanvasGroup>().alpha = 1;
+
+            for (int i = 0; i < PermUI.perm.ballons.Length; i++)
+            {
+                PermUI.perm.ballons[i].rb.gravityScale = Random.Range(-1f, -0.2f);
+            }
+
+            isEasy = false;
+        }
         if (isEasy && PermUI.perm.level < 20)
         {
             PermUI.perm.level++;
+            PermUI.perm.combatTextLevelPlus.SetActive(true);
+            PermUI.perm.combatTextLevelPlus.GetComponent<Animator>().SetTrigger("hit");
             StartCoroutine(LoadLevelEasyTimer());
         }
         if (isEasy && PermUI.perm.level >= 20)
@@ -55,6 +69,8 @@ public class LevelLoader : MonoBehaviour
         if (isMedium && PermUI.perm.level < 40)
         {
             PermUI.perm.level++;
+            PermUI.perm.combatTextLevelPlus.SetActive(true);
+            PermUI.perm.combatTextLevelPlus.GetComponent<Animator>().SetTrigger("hit");
             StartCoroutine(LoadLevelMediumTimer());
         }
         if (isMedium && PermUI.perm.level >= 40)
@@ -67,6 +83,8 @@ public class LevelLoader : MonoBehaviour
         if (isHard && PermUI.perm.level < 60)
         {
             PermUI.perm.level++;
+            PermUI.perm.combatTextScoreMinus.SetActive(true);
+            PermUI.perm.combatTextScoreMinus.GetComponent<Animator>().SetTrigger("hit");
             StartCoroutine(LoadLevelHardTimer());
         }
         if (isHard && PermUI.perm.level >= 60)
@@ -80,6 +98,7 @@ public class LevelLoader : MonoBehaviour
     {
         PermUI.perm.level = 0;
         PermUI.perm.score = 100;
+        PermUI.perm.answerCanvas.SetActive(true);
         isEasy = true;
         isMedium = false;
         isHard = false;
@@ -121,12 +140,12 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentScene);
 
         yield return new WaitForSeconds(1f);
-        PermUI.perm.combatTextPlus.SetActive(false);//
-        PermUI.perm.combatTextMinus.SetActive(false);//
+        PermUI.perm.combatTextScorePlus.SetActive(false);//
+        PermUI.perm.combatTextScoreMinus.SetActive(false);//
+        PermUI.perm.combatTextLevelPlus.SetActive(false);
         level.SetActive(true);
         score.SetActive(true);
         PermUI.perm.advertiser.SetActive(true);
-
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
         PermUI.perm.backStorImagesCanvas.SetActive(true);
@@ -186,7 +205,16 @@ public class LevelLoader : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("1 START MENU");
-        PermUI.perm.victory.SetActive(false);
+        PermUI.perm.victory.GetComponent<CanvasGroup>().alpha = 0;
+        for (int i = 0; i < PermUI.perm.ballons.Length; i++)
+        {
+            PermUI.perm.ballons[i].rb.gravityScale = 2;
+            PermUI.perm.ballons[i].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        }
+
+        PermUI.perm.trueEmoji.SetActive(false);
+        PermUI.perm.backStorImagesCanvas.SetActive(true);
+        PermUI.perm.frontStoreImagesCanvas.SetActive(true);
         level.SetActive(false);
         score.SetActive(false);
         PermUI.perm.level = 0;

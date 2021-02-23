@@ -21,11 +21,16 @@ public class PermUI : MonoBehaviour
     public GameObject falseEmoji;
 
     public GameObject answerCanvas;
+
     public GameObject backStorImagesCanvas;
     public GameObject frontStoreImagesCanvas;
 
-    public GameObject combatTextPlus;
-    public GameObject combatTextMinus;
+    public GameObject combatTextScorePlus;
+    public GameObject combatTextScoreMinus;
+    public GameObject combatTextLevelPlus;
+
+    public Balloons[] ballons;
+    public Collider2D coll;
 
     private void Start()
     {
@@ -42,12 +47,22 @@ public class PermUI : MonoBehaviour
 
         score = 0;
         level = 0;
-
     }
 
     private void Update()
     {
         scoreTxt.text = "Score: " + score.ToString();
         levelText.text = "Level: " + level.ToString();
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Balloon"))
+        {
+            for (int i = 0; i < PermUI.perm.ballons.Length; i++)
+            {
+                PermUI.perm.ballons[i].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            }
+        }
     }
 }

@@ -13,64 +13,67 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 1.unity
-    guid: a2ef87802a518c842847dc052e43293d
+    guid: 6c8e1f2a48c62d74190c66ab27352121
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 2.unity
-    guid: 07b16c05d2da5d647829ac1e344b7139
+    guid: 998f9eb142327af4cbd66a6c4a9a51e1
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 3.unity
-    guid: ac9a305983746bc41a3af729d0fe6989
+    guid: 0d0b520c16e59be4ca82bfb326b231f6
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 4.unity
-    guid: 8428c3e55bd465c44bd18b2c1a7c60fc
+    guid: c612929663d18234e9779d1f61d5a39b
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 5.unity
-    guid: c30e05e9900903c428b74b17acb64ca7
+    guid: 098e2718fc09b3b458086ff1943afacd
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 6.unity
-    guid: ed1a4cb9f90cc5b429ba00d8903a4363
+    guid: 9cc63c7f6cad89049abac3f047e39931
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 7.unity
-    guid: d4ea4595f2061d04d91536dae224ad6e
+    guid: 7313d2499b1669b44a34a41e153407fc
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 8.unity
-    guid: 533c5e27d5bcdf949a307035efb23b15
+    guid: 8328f8402a80b074bbb4b7d918aba56d
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 9.unity
-    guid: ea9ddac7b6ec7eb4d8bfd9c0b3966e64
+    guid: e7a4496c24fab094ca3749e207518dbe
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 10.unity
-    guid: 84772f49e75965c42abefc566ad2a08c
+    guid: 5028be836c227f6419dba2a8bd3af9fe
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 11.unity
-    guid: 28dc181d8cf429640a4f198b734dd738
+    guid: 41500c5c76fc6324d902e1a815a8fe07
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 12.unity
-    guid: 2474b575232b8d34585e5996e9a5d04b
+    guid: 7e7d2298665b4914ab3c49163007416e
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 13.unity
-    guid: cc50d650dc6cd004892c9e3747473656
+    guid: 1938c0144a92c9b4ba5f1185cde47727
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 14.unity
-    guid: f1d5ae55ebc021a4ab96980aeee01832
+    guid: 3eca5a76ff7188a4ca367fd6331eb8f0
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 15.unity
-    guid: 8d74ca34bfcbd684ba27a9b49bfda1f8
+    guid: 053c7d2a23c973a4d845e61d61278d61
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 16.unity
-    guid: 8d5dae2a0442cf045b3a114b06a09f16
+    guid: c7196f590303613488d941bdbacd44f5
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 17.unity
-    guid: d9a353e31d22c9e4ab2677db4bbd2370
+    guid: 19aaed3013f65a242ae8395edb1bd6dc
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 18.unity
-    guid: 3f24a9ed938bcfe458794b7729186ff9
+    guid: ee0e2086ebbda954badbc7f8b3dc356a
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR 19.unity
-    guid: 34f38ddeb22674a48a95fca9d6ae95f3
+    guid: d480de2d527d0ba4db0add7722bd7b32
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Menu's/StartButton.unity
+    guid: b148098227133324cb9aa353135098f4
   - enabled: 0
     path: Assets/Scenes/1 EasyLevel/New Folder/2 LANE.unity
     guid: 3e822bf6fe247fb498311e9d89b32285
