@@ -1602,7 +1602,7 @@ GameObject:
   - component: {fileID: 2040713274}
   - component: {fileID: 2040713273}
   m_Layer: 5
-  m_Name: ClockBackGround
+  m_Name: ClockFace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 2128187448}
   - component: {fileID: 2128187447}
   m_Layer: 5
-  m_Name: CodeFace
+  m_Name: CodeBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,6 +17,7 @@ public class IncorrectButtonHandler : MonoBehaviour
         PermUI.perm.combatTextScoreMinus.GetComponent<Animator>().SetTrigger("hit");
         StartCoroutine(Reset());
         canvasGroup.alpha = 0;
+        
         PermUI.perm.falseEmoji.SetActive(true);
         PermUI.perm.answerCanvas.SetActive(true);
         PermUI.perm.backStorImagesCanvas.SetActive(false);
@@ -33,5 +34,6 @@ public class IncorrectButtonHandler : MonoBehaviour
         PermUI.perm.answerCanvas.SetActive(false);
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

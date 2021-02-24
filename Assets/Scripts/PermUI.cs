@@ -46,7 +46,7 @@ public class PermUI : MonoBehaviour
         }
 
         score = 0;
-        level = 0;
+        level = 1;
     }
 
     private void Update()
