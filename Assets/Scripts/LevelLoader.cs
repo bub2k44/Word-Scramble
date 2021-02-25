@@ -38,7 +38,7 @@ public class LevelLoader : MonoBehaviour
 
     private void Start()
     {
-        BackGroundPlayer.backGroundPlayer.screenStartButton.SetActive(true);
+        BackGroundPlayer.bgp.screenStartButton.SetActive(true);
         is1thru5 = true;
 
         randomSceneEasy = new List<int> 
@@ -60,9 +60,8 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        if (isEasy && PermUI.perm.level < 20)
+        if (isEasy && PermUI.perm.level <= 20)
         {
-            PermUI.perm.level++;
             PermUI.perm.combatTextLevelPlus.SetActive(true);
             PermUI.perm.combatTextLevelPlus.GetComponent<Animator>().SetTrigger("hit");
 
@@ -89,7 +88,7 @@ public class LevelLoader : MonoBehaviour
 
             StartCoroutine(LoadLevelEasyTimer());
         }
-        if (isEasy && PermUI.perm.level >= 20)
+        if (isEasy && PermUI.perm.level >= 21)
         {
             for (int i = 0; i < PermUI.perm.ballons.Length; i++)
             {
@@ -108,7 +107,6 @@ public class LevelLoader : MonoBehaviour
         }
         if (isMedium && PermUI.perm.level < 40)
         {
-            PermUI.perm.level++;
             PermUI.perm.combatTextLevelPlus.SetActive(true);
             PermUI.perm.combatTextLevelPlus.GetComponent<Animator>().SetTrigger("hit");
 
@@ -147,11 +145,10 @@ public class LevelLoader : MonoBehaviour
             isHard = true;
             StartCoroutine(LoadLevelHardTimer());
         }
-        if (isHard && PermUI.perm.level < 60)
+        if (isHard && PermUI.perm.level <= 60)
         {
-            PermUI.perm.level++;
-            PermUI.perm.combatTextScoreMinus.SetActive(true);
-            PermUI.perm.combatTextScoreMinus.GetComponent<Animator>().SetTrigger("hit");
+            PermUI.perm.combatTextLevelPlus.SetActive(true);
+            PermUI.perm.combatTextLevelPlus.GetComponent<Animator>().SetTrigger("hit");
 
             if (PermUI.perm.level <= 45)
             {
@@ -176,13 +173,16 @@ public class LevelLoader : MonoBehaviour
 
             StartCoroutine(LoadLevelHardTimer());
         }
-        if (isHard && PermUI.perm.level >= 60)
+        if (isHard && PermUI.perm.level > 60)
         {
             for (int i = 0; i < PermUI.perm.ballons.Length; i++)
             {
                 PermUI.perm.ballons[i].rb.gravityScale = Random.Range(-1f, -0.2f);
             }
 
+            PermUI.perm.victory.GetComponent<CanvasGroup>().alpha = 1;
+            PermUI.perm.victory.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            PermUI.perm.victory.GetComponent<CanvasGroup>().interactable = true;
             isHard = false;
         }
     }    
@@ -206,23 +206,23 @@ public class LevelLoader : MonoBehaviour
 
         if (is1thru5)
         {
-            BackGroundPlayer.backGroundPlayer.screenStartMenu.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen1_5.SetActive(true);
+            BackGroundPlayer.bgp.screenStartMenu.SetActive(false);
+            BackGroundPlayer.bgp.screen1_5.SetActive(true);
         }
         if (is6thru10)
         {
-            BackGroundPlayer.backGroundPlayer.screen1_5.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen6_10.SetActive(true);
+            BackGroundPlayer.bgp.screen1_5.SetActive(false);
+            BackGroundPlayer.bgp.screen6_10.SetActive(true);
         }
         if (is11thru15)
         {
-            BackGroundPlayer.backGroundPlayer.screen6_10.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen11_15.SetActive(true);
+            BackGroundPlayer.bgp.screen6_10.SetActive(false);
+            BackGroundPlayer.bgp.screen11_15.SetActive(true);
         }
         if (is16thru20)
         {
-            BackGroundPlayer.backGroundPlayer.screen11_15.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen16_20.SetActive(true);
+            BackGroundPlayer.bgp.screen11_15.SetActive(false);
+            BackGroundPlayer.bgp.screen16_20.SetActive(true);
         }
       
         level.SetActive(true);
@@ -231,9 +231,11 @@ public class LevelLoader : MonoBehaviour
         PermUI.perm.combatTextScorePlus.SetActive(false);
         PermUI.perm.combatTextScoreMinus.SetActive(false);
         PermUI.perm.combatTextLevelPlus.SetActive(false);
+
         PermUI.perm.advertiser.SetActive(true);
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
+
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
@@ -263,31 +265,36 @@ public class LevelLoader : MonoBehaviour
                 PermUI.perm.ballons[i].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             }
 
-            BackGroundPlayer.backGroundPlayer.screen16_20.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen1_5.SetActive(true);
+            BackGroundPlayer.bgp.screen16_20.SetActive(false);
+            BackGroundPlayer.bgp.screen1_5.SetActive(true);
         }
         if (is6thru10)
         {
-            BackGroundPlayer.backGroundPlayer.screen1_5.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen6_10.SetActive(true);
+            BackGroundPlayer.bgp.screen1_5.SetActive(false);
+            BackGroundPlayer.bgp.screen6_10.SetActive(true);
         }
         if (is11thru15)
         {
-            BackGroundPlayer.backGroundPlayer.screen6_10.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen11_15.SetActive(true);
+            BackGroundPlayer.bgp.screen6_10.SetActive(false);
+            BackGroundPlayer.bgp.screen11_15.SetActive(true);
         }
         if (is16thru20)
         {
-            BackGroundPlayer.backGroundPlayer.screen11_15.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen16_20.SetActive(true);
+            BackGroundPlayer.bgp.screen11_15.SetActive(false);
+            BackGroundPlayer.bgp.screen16_20.SetActive(true);
         }
 
         level.SetActive(true);
         score.SetActive(true);
-        PermUI.perm.advertiser.SetActive(true);
 
+        PermUI.perm.combatTextScorePlus.SetActive(false);
+        PermUI.perm.combatTextScoreMinus.SetActive(false);
+        PermUI.perm.combatTextLevelPlus.SetActive(false);
+
+        PermUI.perm.advertiser.SetActive(true);
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
+
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
@@ -305,7 +312,7 @@ public class LevelLoader : MonoBehaviour
         int currentScene = randomSceneHard[randomIndex];
         randomSceneHard.RemoveAt(randomIndex);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(currentScene);
 
@@ -317,31 +324,36 @@ public class LevelLoader : MonoBehaviour
                 PermUI.perm.ballons[i].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             }
 
-            BackGroundPlayer.backGroundPlayer.screen16_20.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen1_5.SetActive(true);
+            BackGroundPlayer.bgp.screen16_20.SetActive(false);
+            BackGroundPlayer.bgp.screen1_5.SetActive(true);
         }
         if (is6thru10)
         {
-            BackGroundPlayer.backGroundPlayer.screen1_5.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen6_10.SetActive(true);
+            BackGroundPlayer.bgp.screen1_5.SetActive(false);
+            BackGroundPlayer.bgp.screen6_10.SetActive(true);
         }
         if (is11thru15)
         {
-            BackGroundPlayer.backGroundPlayer.screen6_10.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen11_15.SetActive(true);
+            BackGroundPlayer.bgp.screen6_10.SetActive(false);
+            BackGroundPlayer.bgp.screen11_15.SetActive(true);
         }
         if (is16thru20)
         {
-            BackGroundPlayer.backGroundPlayer.screen11_15.SetActive(false);
-            BackGroundPlayer.backGroundPlayer.screen16_20.SetActive(true);
+            BackGroundPlayer.bgp.screen11_15.SetActive(false);
+            BackGroundPlayer.bgp.screen16_20.SetActive(true);
         }
 
         level.SetActive(true);
         score.SetActive(true);
-        PermUI.perm.advertiser.SetActive(true);
 
+        PermUI.perm.combatTextScorePlus.SetActive(false);
+        PermUI.perm.combatTextScoreMinus.SetActive(false);
+        PermUI.perm.combatTextLevelPlus.SetActive(false);
+
+        PermUI.perm.advertiser.SetActive(true);
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
+
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
@@ -355,6 +367,7 @@ public class LevelLoader : MonoBehaviour
         isEasy = true;
         isMedium = false;
         isHard = false;
+
         StartCoroutine(LoadLevelEasyTimer());
     }
 
@@ -367,6 +380,7 @@ public class LevelLoader : MonoBehaviour
         isEasy = false;
         isMedium = true;
         isHard = false;
+
         StartCoroutine(LoadLevelMediumTimer());
     }
 
@@ -379,15 +393,20 @@ public class LevelLoader : MonoBehaviour
         isEasy = false;
         isMedium = false;
         isHard = true;
+
         StartCoroutine(LoadLevelHardTimer());
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("1 START MENU");
-        BackGroundPlayer.backGroundPlayer.screenStartButton.SetActive(false);
-        BackGroundPlayer.backGroundPlayer.screenStartMenu.SetActive(true);
+
+        BackGroundPlayer.bgp.screenStartButton.SetActive(false);
+        BackGroundPlayer.bgp.screenStartMenu.SetActive(true);
+
         PermUI.perm.victory.GetComponent<CanvasGroup>().alpha = 0;
+        PermUI.perm.victory.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        PermUI.perm.victory.GetComponent<CanvasGroup>().interactable = false;
 
         for (int i = 0; i < PermUI.perm.ballons.Length; i++)
         {
@@ -396,10 +415,13 @@ public class LevelLoader : MonoBehaviour
         }
 
         PermUI.perm.trueEmoji.SetActive(false);
+
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
+
         level.SetActive(false);
         score.SetActive(false);
+
         PermUI.perm.level = 1;
         PermUI.perm.score = 0;
     }

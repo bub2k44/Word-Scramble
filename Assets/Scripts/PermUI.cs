@@ -52,7 +52,15 @@ public class PermUI : MonoBehaviour
     private void Update()
     {
         scoreTxt.text = "Score: " + score.ToString();
-        levelText.text = "Level: " + level.ToString();
+        if (level < 61)
+        {
+            levelText.text = "Level: " + level.ToString();
+        }
+        else
+        {
+            levelText.text = "Level: " + 60.ToString();
+        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)

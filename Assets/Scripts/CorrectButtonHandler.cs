@@ -21,7 +21,13 @@ public class CorrectButtonHandler : MonoBehaviour
         PermUI.perm.answerCanvas.SetActive(true);
         PermUI.perm.backStorImagesCanvas.SetActive(false);
         PermUI.perm.frontStoreImagesCanvas.SetActive(false);
-        PermUI.perm.score += 100;       
+        PermUI.perm.score += 100;
+
+        if (PermUI.perm.level < 61)
+        {
+            PermUI.perm.level++;
+        }
+        
         PermUI.perm.ll.LoadNextLevel();
         SoundManager.PlaySound("CoinPickUp");
     }

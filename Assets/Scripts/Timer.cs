@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
     private CanvasGroup canvasGroup;
 
     private float currentTime;
-    private float startingTime = 1f;
+    private float startingTime = .1f;
     private float speed = .3f;
 
     private void Start()
@@ -50,6 +50,10 @@ public class Timer : MonoBehaviour
             scrambleScreenCanvasGroup.interactable = true;
             
             //codeFace.fillAmount = startingTime;
+        }
+        if (codeFace.fillAmount > 0)
+        {
+            scrambleScreenCanvasGroup.interactable = false;
         }
     }
 

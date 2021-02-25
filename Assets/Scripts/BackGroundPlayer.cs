@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackGroundPlayer : MonoBehaviour
 {
-    public static BackGroundPlayer backGroundPlayer;
+    public static BackGroundPlayer bgp;
 
     public GameObject screenStartButton;
     public GameObject screenStartMenu;
@@ -17,9 +17,9 @@ public class BackGroundPlayer : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        if (!backGroundPlayer)
+        if (!bgp)
         {
-            backGroundPlayer = this;
+            bgp = this;
         }
         else
         {

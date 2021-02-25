@@ -5,14 +5,19 @@ using UnityEngine;
 public class IncorrectButtonHandler : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
+    private CanvasGroup scrambleScreen;
 
     private void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        scrambleScreen = GetComponentInParent<CanvasGroup>();
     }
 
     public void DiasbleButton()
     {
+        scrambleScreen.interactable = false;
+        scrambleScreen.blocksRaycasts = false;
+
         PermUI.perm.combatTextScoreMinus.SetActive(true);
         PermUI.perm.combatTextScoreMinus.GetComponent<Animator>().SetTrigger("hit");
         StartCoroutine(Reset());
@@ -30,6 +35,8 @@ public class IncorrectButtonHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
+        scrambleScreen.interactable = true;
+        PermUI.perm.combatTextScoreMinus.SetActive(false);
         PermUI.perm.falseEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
         PermUI.perm.backStorImagesCanvas.SetActive(true);

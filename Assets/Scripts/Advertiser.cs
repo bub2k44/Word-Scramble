@@ -16,8 +16,6 @@ public class Advertiser : MonoBehaviour
     private float speed = .2f;
     private int imageIndex = 0;
 
-    private bool isImage0 = true;
-
     private void Start()
     {
         currentTime = startingTime;
