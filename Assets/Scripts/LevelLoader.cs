@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class LevelLoader : MonoBehaviour
 {
     private List<int> randomSceneEasy;
     private List<int> randomSceneMedium;
     private List<int> randomSceneHard;
-
     public bool isEasy;
     public bool isMedium;
     public bool isHard;
-
     public bool is1thru5 = false;
     public bool is6thru10 = false;
     public bool is11thru15 = false;
@@ -199,9 +196,7 @@ public class LevelLoader : MonoBehaviour
         int randomIndex = Random.Range(0, randomSceneEasy.Count);
         int currentScene = randomSceneEasy[randomIndex];
         randomSceneEasy.RemoveAt(randomIndex);
-
         yield return new WaitForSeconds(1f);
-
         SceneManager.LoadScene(currentScene);
 
         if (is1thru5)
@@ -227,15 +222,12 @@ public class LevelLoader : MonoBehaviour
       
         level.SetActive(true);
         score.SetActive(true);
-
         PermUI.perm.combatTextScorePlus.SetActive(false);
         PermUI.perm.combatTextScoreMinus.SetActive(false);
         PermUI.perm.combatTextLevelPlus.SetActive(false);
-
         PermUI.perm.advertiser.SetActive(true);
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
-
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
@@ -252,9 +244,7 @@ public class LevelLoader : MonoBehaviour
         int randomIndex = Random.Range(0, randomSceneMedium.Count);
         int currentScene = randomSceneMedium[randomIndex];
         randomSceneMedium.RemoveAt(randomIndex);
-
         yield return new WaitForSeconds(1f);
-
         SceneManager.LoadScene(currentScene);
 
         if (is1thru5)
@@ -286,15 +276,12 @@ public class LevelLoader : MonoBehaviour
 
         level.SetActive(true);
         score.SetActive(true);
-
         PermUI.perm.combatTextScorePlus.SetActive(false);
         PermUI.perm.combatTextScoreMinus.SetActive(false);
         PermUI.perm.combatTextLevelPlus.SetActive(false);
-
         PermUI.perm.advertiser.SetActive(true);
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
-
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
@@ -311,9 +298,7 @@ public class LevelLoader : MonoBehaviour
         int randomIndex = Random.Range(0, randomSceneHard.Count);
         int currentScene = randomSceneHard[randomIndex];
         randomSceneHard.RemoveAt(randomIndex);
-
         yield return new WaitForSeconds(1f);
-
         SceneManager.LoadScene(currentScene);
 
         if (is1thru5)
@@ -345,15 +330,12 @@ public class LevelLoader : MonoBehaviour
 
         level.SetActive(true);
         score.SetActive(true);
-
         PermUI.perm.combatTextScorePlus.SetActive(false);
         PermUI.perm.combatTextScoreMinus.SetActive(false);
         PermUI.perm.combatTextLevelPlus.SetActive(false);
-
         PermUI.perm.advertiser.SetActive(true);
         PermUI.perm.trueEmoji.SetActive(false);
         PermUI.perm.answerCanvas.SetActive(false);
-
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
     }
@@ -363,11 +345,9 @@ public class LevelLoader : MonoBehaviour
         PermUI.perm.level = 1;
         PermUI.perm.score = 100;
         PermUI.perm.answerCanvas.SetActive(true);
-
         isEasy = true;
         isMedium = false;
         isHard = false;
-
         StartCoroutine(LoadLevelEasyTimer());
     }
 
@@ -376,11 +356,9 @@ public class LevelLoader : MonoBehaviour
         PermUI.perm.level = 21;
         PermUI.perm.score = 100;
         PermUI.perm.answerCanvas.SetActive(true);
-
         isEasy = false;
         isMedium = true;
         isHard = false;
-
         StartCoroutine(LoadLevelMediumTimer());
     }
 
@@ -389,21 +367,17 @@ public class LevelLoader : MonoBehaviour
         PermUI.perm.level = 41;
         PermUI.perm.score = 100;
         PermUI.perm.answerCanvas.SetActive(true);
-
         isEasy = false;
         isMedium = false;
         isHard = true;
-
         StartCoroutine(LoadLevelHardTimer());
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("1 START MENU");
-
         BackGroundPlayer.bgp.screenStartButton.SetActive(false);
         BackGroundPlayer.bgp.screenStartMenu.SetActive(true);
-
         PermUI.perm.victory.GetComponent<CanvasGroup>().alpha = 0;
         PermUI.perm.victory.GetComponent<CanvasGroup>().blocksRaycasts = false;
         PermUI.perm.victory.GetComponent<CanvasGroup>().interactable = false;
@@ -415,13 +389,10 @@ public class LevelLoader : MonoBehaviour
         }
 
         PermUI.perm.trueEmoji.SetActive(false);
-
         PermUI.perm.backStorImagesCanvas.SetActive(true);
         PermUI.perm.frontStoreImagesCanvas.SetActive(true);
-
         level.SetActive(false);
         score.SetActive(false);
-
         PermUI.perm.level = 1;
         PermUI.perm.score = 0;
     }

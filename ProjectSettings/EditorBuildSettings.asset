@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu's/1 START MENU.unity
-    guid: 8198dbc082af9a24cbf1915920c60572
+    path: Assets/Scenes/Menu's/0 START BUTTON.unity
+    guid: b148098227133324cb9aa353135098f4
   - enabled: 1
     path: Assets/Scenes/1 EasyLevel/1 AIR.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -189,8 +189,8 @@ EditorBuildSettings:
     path: Assets/Scenes/3 HardLevel/20 OCCASION 6.unity
     guid: ecff04bcb3744954eb5ee0173d7faf3c
   - enabled: 1
-    path: Assets/Scenes/Menu's/0 START BUTTON.unity
-    guid: b148098227133324cb9aa353135098f4
+    path: Assets/Scenes/Menu's/1 START MENU.unity
+    guid: 8198dbc082af9a24cbf1915920c60572
   - enabled: 1
     path: Assets/Scenes/Menu's/Tutorial.unity
     guid: faefc5008fc213e46aad2d276383e04c

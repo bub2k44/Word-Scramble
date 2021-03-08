@@ -887,6 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569f5cb3b694804478e0412243724c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrambleScreen: {fileID: 367233999}
 --- !u!225 &830004572
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1653,7 +1654,7 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 0
-  m_FillClockwise: 0
+  m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1

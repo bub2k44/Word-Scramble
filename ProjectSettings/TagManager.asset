@@ -12,6 +12,7 @@ TagManager:
   - Balloon
   - VictoryText
   - ReplayButton
+  - CorrectButton
   layers:
   - Default
   - TransparentFX

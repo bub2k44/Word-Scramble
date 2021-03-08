@@ -1,34 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class PermUI : MonoBehaviour
 {
     public static PermUI perm;
-
     public LevelLoader ll;
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI levelText;
-
     public GameObject victory;
     public GameObject advertiser;
-
     public int level;
     public int score;
-
     public GameObject trueEmoji;
     public GameObject falseEmoji;
-
     public GameObject answerCanvas;
-
     public GameObject backStorImagesCanvas;
     public GameObject frontStoreImagesCanvas;
-
     public GameObject combatTextScorePlus;
     public GameObject combatTextScoreMinus;
     public GameObject combatTextLevelPlus;
-
     public Balloons[] ballons;
     public Collider2D coll;
 
@@ -52,6 +42,7 @@ public class PermUI : MonoBehaviour
     private void Update()
     {
         scoreTxt.text = "Score: " + score.ToString();
+
         if (level < 61)
         {
             levelText.text = "Level: " + level.ToString();
